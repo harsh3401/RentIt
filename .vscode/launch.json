@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Flutter-Android",
+        "request": "launch",
+        "type": "dart",
+        "deviceId": "emulator-5554"
+      },
+      {
+        "name": "Flutter-iOS",
+        "request": "launch",
+        "type": "dart",
+        "deviceId": "9D199EEF-934F-4E10-8176-CA427F964459"
+      }
+      ,
+     
+    ],
+    "compounds": [
+      {
+        "name": "IOS&ANDROID",
+        "configurations": ["Flutter-Android","Flutter-iOS" ]
+      }
+    ]
+  }

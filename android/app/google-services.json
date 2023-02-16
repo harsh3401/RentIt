@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1036148748900",
+    "project_id": "socialauth-fc814",
+    "storage_bucket": "socialauth-fc814.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036148748900:android:79a1ba77a715a70ff4e571",
+        "android_client_info": {
+          "package_name": "com.example.rentofy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036148748900-0jjsufm5bu5iprqeu6lekrfb7hq2lm3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7WTCN_HXgyy8j-K9JVimtWr7ULBcdVW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036148748900-0jjsufm5bu5iprqeu6lekrfb7hq2lm3o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1036148748900-njqpi8j3jttf43j31gl35ugmj3us1lkv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "host.exp.exponent"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
