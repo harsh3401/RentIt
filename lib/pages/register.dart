@@ -49,8 +49,20 @@ class _RegisterState extends State<Register> {
     try {
       print(_controllerEmail.text);
       print(_controllerPassword.text);
-      await Auth().signInWithEmailAndPassword(
-          email: _controllerEmail.text, password: _controllerPassword.text);
+      await Auth().signInWithFacebook();
+    } on FirebaseAuthException catch (e) {
+      print(e.message);
+      setState(() {
+        errorMessage = e.message;
+      });
+    }
+  }
+
+  Future<void> signInWithGoogle() async {
+    try {
+      print(_controllerEmail.text);
+      print(_controllerPassword.text);
+      await Auth().signInWithGoogle();
     } on FirebaseAuthException catch (e) {
       setState(() {
         errorMessage = e.message;
@@ -265,36 +277,51 @@ class _RegisterState extends State<Register> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          ElevatedButton(
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              backgroundColor: Colors.black,
-                            ),
-                            onPressed: () {},
-                            child: const Text('f'),
-                          ),
-                          ElevatedButton(
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              backgroundColor: Colors.black,
-                            ),
-                            onPressed: () {},
-                            child: const Text('g'),
-                          ),
-                          ElevatedButton(
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.white,
-                              backgroundColor: Colors.black,
-                            ),
-                            onPressed: () {},
-                            child: const Text('a'),
-                          ),
+                          // ElevatedButton(
+                          //   style: TextButton.styleFrom(
+                          //     foregroundColor: Colors.white,
+                          //     backgroundColor: Colors.black,
+                          //   ),
+                          //   onPressed: () {},
+                          //   child: const Text('f'),
+                          // ),
+                          // ElevatedButton(
+                          //   style: TextButton.styleFrom(
+                          //     foregroundColor: Colors.white,
+                          //     backgroundColor: Colors.black,
+                          //   ),
+                          //   onPressed: () {
+                          //     signInWithGoogle();
+                          //   },
+                          //   child: const Text('g'),
+                          // ),
+                          // ElevatedButton(
+                          //   style: TextButton.styleFrom(
+                          //     foregroundColor: Colors.white,
+                          //     backgroundColor: Colors.black,
+                          //   ),
+                          //   onPressed: () {},
+                          //   child: const Text('a'),
+                          // ),
                           IconButton(
+                              style: IconButton.styleFrom(),
+                              // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                              icon: FaIcon(FontAwesomeIcons.facebook),
+                              onPressed: () {
+                                signInWithFacebook();
+                              }),
+                          IconButton(
+
+                              // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                              icon: FaIcon(FontAwesomeIcons.google),
+                              onPressed: () {
+                                signInWithGoogle();
+                              }),
+                          IconButton(
+
                               // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
                               icon: FaIcon(FontAwesomeIcons.apple),
-                              onPressed: () {
-                                print("Pressed");
-                              })
+                              onPressed: () {})
                         ],
                       ),
                     ),
@@ -322,7 +349,6 @@ class _RegisterState extends State<Register> {
                             //   ),
                             // )
                             _loginOrRegisterButton(),
-                            _errorMessage()
                           ]),
                     )
                   ],

@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1036148748900-3nhbscar4qoo8r7k296flcq8lhbui435.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rentofy",
+            "certificate_hash": "d5f324d61f1eb80fd6d10f337a114b92ef9d8b6e"
+          }
+        },
+        {
           "client_id": "1036148748900-0jjsufm5bu5iprqeu6lekrfb7hq2lm3o.apps.googleusercontent.com",
           "client_type": 3
         }
